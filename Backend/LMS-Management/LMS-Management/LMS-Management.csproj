@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LMS-Management.BLL\LMS-Management.BLL.csproj" />
+    <ProjectReference Include="..\LMS-Management.DAL\LMS-Management.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
