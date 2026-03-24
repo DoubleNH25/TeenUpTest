@@ -18,6 +18,14 @@ public class SubscriptionsController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetByStudent([FromQuery] string? studentId)
+    {
+        if (string.IsNullOrWhiteSpace(studentId)) return BadRequest(new { message = "studentId is required" });
+        var result = await _service.GetByStudentAsync(studentId);
+        return Ok(result);
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(string id)
     {

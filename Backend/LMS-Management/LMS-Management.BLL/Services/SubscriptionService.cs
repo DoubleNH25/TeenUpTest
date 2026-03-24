@@ -53,6 +53,13 @@ public class SubscriptionService : ISubscriptionService
         return MapToDto(sub, student?.Name ?? string.Empty);
     }
 
+    public async Task<IEnumerable<SubscriptionDto>> GetByStudentAsync(string studentId)
+    {
+        var subs = await _db.Subscriptions.Find(s => s.StudentId == studentId).ToListAsync();
+        var student = await _db.Students.Find(s => s.Id == studentId).FirstOrDefaultAsync();
+        return subs.Select(s => MapToDto(s, student?.Name ?? string.Empty));
+    }
+
     private static SubscriptionDto MapToDto(Subscription s, string studentName) => new()
     {
         Id = s.Id, StudentId = s.StudentId, StudentName = studentName,

@@ -34,6 +34,15 @@ public class StudentService : IStudentService
         return MapToDto(student, parent);
     }
 
+    public async Task<IEnumerable<StudentDto>> GetAllAsync()
+    {
+        var students = await _db.Students.Find(_ => true).ToListAsync();
+        var parentIds = students.Select(s => s.ParentId).Distinct().ToList();
+        var parents = await _db.Parents.Find(p => parentIds.Contains(p.Id)).ToListAsync();
+        var parentMap = parents.ToDictionary(p => p.Id);
+        return students.Select(s => MapToDto(s, parentMap.GetValueOrDefault(s.ParentId)));
+    }
+
     private static StudentDto MapToDto(Student s, Parent? parent) => new()
     {
         Id = s.Id, Name = s.Name, Dob = s.Dob, Gender = s.Gender, CurrentGrade = s.CurrentGrade,

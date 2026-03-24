@@ -25,6 +25,12 @@ public class ParentService : IParentService
         return parent is null ? null : MapToDto(parent);
     }
 
+    public async Task<IEnumerable<ParentDto>> GetAllAsync()
+    {
+        var parents = await _db.Parents.Find(_ => true).ToListAsync();
+        return parents.Select(MapToDto);
+    }
+
     private static ParentDto MapToDto(Parent p) => new()
     {
         Id = p.Id, Name = p.Name, Phone = p.Phone, Email = p.Email

@@ -7,4 +7,5 @@ public interface ISubscriptionService
     Task<SubscriptionDto> CreateAsync(CreateSubscriptionDto dto);
     Task<SubscriptionDto?> GetByIdAsync(string id);
     Task<SubscriptionDto?> UseSessionAsync(string id);
+    Task<IEnumerable<SubscriptionDto>> GetByStudentAsync(string studentId);
 }
