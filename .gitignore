@@ -1,0 +1,182 @@
+# =========================
+# OS
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+*.user
+*.userosscache
+*.userprefs
+
+# JetBrains Rider / Resharper
+*.DotSettings.user
+_ReSharper*/
+*_ReSharper.Caches/
+
+# Visual Studio
+.vs/
+*.dbmdl
+*.jfm
+*.pdb
+
+# =========================
+# Node.js / React / React Native
+# =========================
+node_modules/
+bower_components/
+jspm_packages/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+coverage/
+.nyc_output/
+.next/
+out/
+storybook-static/
+
+# React Native specific
+.expo/
+.expo-shared/
+web-build/
+metro-cache/
+*.keystore
+*.jks
+
+# Android
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/build/
+android/captures/
+android/.cxx/
+
+# iOS
+ios/Pods/
+ios/build/
+ios/DerivedData/
+*.xcworkspace
+*.xcuserdata/
+*.xcodeproj/project.xcworkspace/
+*.xcuserstate
+
+# CocoaPods
+Podfile.lock
+*.xcuserdatad
+*.xcuserstate
+
+# Expo
+.expo/
+.expo-shared/
+web-build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# =========================
+# ASP.NET / .NET
+# =========================
+bin/
+obj/
+[Bb]uild[Ll]og.*
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget.props
+*.nuget.targets
+
+# ASP.NET publish
+wwwroot/
+AppPackages/
+BundleArtifacts/
+PublishScripts/
+*_i.c
+
+# ASP.NET scaffolding
+ScaffoldingReadMe.txt
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+.nuget/
+project.json
+*.vspscc
+
+# Tye
+.tye/
+
+# =========================
+# Secrets / Environment
+# =========================
+# .env
+# .env.*.local
+*.secret
+secrets.json
+
+# =========================
+# Others
+# =========================
+# Logs
+logs/
+*.log
+
+# Test coverage
+coverage/
+lcov-report/
+
+# Temporary
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Cache
+.cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# =========================
+# Docker
+# =========================
+.dockerignore
+docker-compose.override.yml
+docker-compose.override.yaml
+/Frontend/Web/8/
